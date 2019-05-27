@@ -5,6 +5,7 @@ import TodosContext from './context';
 import todosReducer from './reducer';
 
 import TodoList from './components/TodosList';
+import TodoForm from './components/TodoForm';
 
 const App = () => {
 	const initState = useContext(TodosContext);
@@ -12,6 +13,7 @@ const App = () => {
 
 	return (
 		<TodosContext.Provider value={{ state, dispatch }}>
+			<TodoForm />
 			<TodoList />
 		</TodosContext.Provider>
 	);
