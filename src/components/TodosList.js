@@ -18,9 +18,15 @@ export default function TodoList() {
 						<span
 							className={`flex-1 ml-12 cursor-pointer ${todo.complete &&
 								'line-through text-gray-500'}`}
-							onDoubleClick={() =>
-								dispatch({ type: 'TOGGLE_TODO', payload: todo })
-							}
+							onDoubleClick={async () => {
+								const response = await axios.patch(
+									`https://hooks-todos-api-4l6l4i9an.now.sh/todos/${todo.id}`,
+									{
+										complete: !todo.complete
+									}
+								);
+								dispatch({ type: 'TOGGLE_TODO', payload: response.data });
+							}}
 						>
 							{todo.text}
 						</span>
