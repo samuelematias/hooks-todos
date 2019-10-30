@@ -18,7 +18,7 @@
 
 <!-- about app and course section -->
 
-## About this app and the course
+## About this app 
 
 This app is a Complete crud app whose state is managed with React Context and the Reducer is connected to its my ownn [API](https://github.com/samuelmataraso/hooks-todos-api) to save any changes made entirely with functional components (stateless components), no class components and most importantly, React Hooks.
 This app was developed on the Udemy Course [React Hooks](https://www.udemy.com/react-hooks/) by [Reed Barger](https://www.udemy.com/user/reed-barger//).
